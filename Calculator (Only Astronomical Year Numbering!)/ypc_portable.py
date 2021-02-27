@@ -756,6 +756,7 @@ def menu4():
 						main()
 				
 				os.system('clear')
+				print("Requested : Cycle of ->",x,"years\n")
 				print("\n------------------------------------------------")
 				print("[!] Current year ->", w)
 				print("\n[!] Current total year # (in ordinal) ->", w+1)
@@ -813,9 +814,12 @@ def menu4():
 			print("\n\nAnd ends on December 31 ,",x*(y-1)+x-1)
 			print("(Ordinalized as Year #",x*(y-1)+x,")") 
 			print("\n")
-			print("Enter Year # of the cycle! (Must be from 1 to ",x,"!") # Enter the j-th year of the i-th cycle from range 1 to the user inputted year cycles.
+			print("\nIf you want, enter 0 for fast access to last year of the cycle!")
+			print("Enter Year # of the cycle! (Must be from 1 to ",x,"!)") # Enter the j-th year of the i-th cycle from range 1 to the user inputted year cycles.
 			z = int(input(">> "))
-			if z < 1 or z > x: # If the j-th year is less than one or exceeded the user inputted year cycles, prompt for try again or not
+			if z == 0:
+				z = x
+			if z < 0 or z > x: # If the j-th year is less than one or exceeded the user inputted year cycles, prompt for try again or not
 				print("Must be in range 1 to",x,"!")
 				print("Try Again? (y[for repeat] / any key to main menu) >> ")
 				choice2 = input()
@@ -861,6 +865,7 @@ def menu4():
 					main()
 			
 			os.system('clear')
+			print("Requested : Cycle of ->",x,"years\n")
 			print("\n------------------------------------------------")
 			print("[!] Current year ->", res)
 			print("\n[!] Current total year # (in ordinal) ->", res+1)
@@ -1028,6 +1033,8 @@ def menu5():
 			x = datetime.datetime(a%400,ab,abc)
 		
 		# Print the result
+		os.system('clear')
+		print("Requested : Cycle of ->",c,"years\n")
 		print("\n\n")
 		print("[!] Current year ->", a)
 		print("\n[!] Current total year # (in ordinal) ->", a+1)
@@ -1126,10 +1133,12 @@ def menu6():
 		print("\n\nAnd ends on December 31 ,",(x*(y-1)+x-1))
 		print("(Ordinalized as Year #",(x*(y-1)+x),")")   
 		print("\n")
+		print("\nIf you want, enter 0 for fast access to last year of the cycle!")
 		print("Enter Year # of the cycle! (Must be from 1 to ",x,"!)") # Enter the j-th year of the i-th cycle from range 1 to the user inputted year cycles.
 		z = int(input(">> "))
-		
-		if z < 1 or z > x: # If the j-th year is less than 1 or exceeded the user inputted year-cycles, then prompt to try again or not.
+		if z == 0:
+			z = x
+		if z < 0 or z > x: # If the j-th year is less than 1 or exceeded the user inputted year-cycles, then prompt to try again or not.
 			print("\n Must be in range 1 to",x,"!")
 			choice2 = input("Try Again? (y[for repeat] / any key to main menu) >> ")
 			if choice2 == 'y':
@@ -1270,13 +1279,20 @@ def menu6():
 		elif showyear%400 != 0:
 			i = datetime.datetime(showyear%400,ab,abc)
 
-		#The outputs for user inputs will be described mainly at line 1141-1142 
+		os.system('clear')
+		print("Requested : Cycle of ->",x,"years\n")
 		print("\n\n")
 		print("[!] Current year ->", showyear)
 		print("\n[!] Current total year # ->", showyear+1)
 		print("\n[!] Current specified year-cycle # (in ordinal) ->", y)
 		print("\n[!] Current year # in the cycle ->", z)
 		print("\n------------------------------------------------")
+
+		print("\n\nThis cycle starts from January 1 ,",x*(y-1)+0)
+		print("(Ordinalized as Year #",x*(y-1)+1,")")
+		print("\n\nAnd ends on December 31 ,",(x*(y-1)+x-1))
+		print("(Ordinalized as Year #",(x*(y-1)+x),")")   
+		print("\n")
 
 		print("\n[*] D/M/Y Format :\n")
 		print("\n",showday,",",abc,month,",",showyear)
@@ -1420,8 +1436,11 @@ def menu8():
 		print("\n")
 		print("1 -",n,"!") 
 		print("\n\n")
+		print("\nIf you want, enter 0 for fast access to last year of the cycle!")
 		j = int(input("Enter j-th year of the cycle >> ")) # Enter the corresponding j-th year of the cycle ranging from 1 to user inputted year cycles
-		if j < 1 or j > n: # If the j-th year less than 1 or exceeded the user inputted year cycles..
+		if j == 0:
+			j = n
+		if j < 0 or j > n: # If the j-th year less than 1 or exceeded the user inputted year cycles..
 			x = input("Press y and enter to try again, or any key plus enter to return to main menu! >> ")
 			if x == 'y':
 				menu8()
@@ -1783,7 +1802,7 @@ def ext2():
 	try:
 		os.system('clear')
 		print("9b. Years left until the next specific calendrical n - cycle\n\n")
-		year = int(input("Enter Year >> ")) #2020
+		year = int(input("Enter Year >> "))
 		cycle = int(input("Enter n - year cycle (more than 0) >> ")) #10
 		if cycle < 1:
 			print("Cycle must be more than 0!")
@@ -1835,7 +1854,7 @@ def ext3():
 		sel = input("By direct enter i-th cycle (x), or by manually enter year to detect the cycle automatically (y),\nor direct detect the cycle along with the i-th year of the cycle (z) ? >> ")
 		if sel == "x" or sel == "X": 
 			print("\n")
-			y = int(input("Enter n - year cycle (more than 0!) >> ")) #10
+			y = int(input("Enter n - year cycle (more than 0!) >> "))
 			if y < 1:
 				print("Cycle must be more than 0!")
 				choice2 = input("Try Again? (y[for repeat] / any key to main menu) >> ")
@@ -1859,9 +1878,12 @@ def ext3():
 
 			
 			print("From 1 up to",y,",")
+			print("\nOr if you want, enter 0 for fast access to last year of the cycle!")
 			print("\n")
 			detect = int(input("Please enter i-th year of the cycle! >> "))
-			if detect < 1 or detect > y:
+			if detect == 0:
+				detect = y
+			if detect < 0 or detect > y:
 				print("\nOut of range!\n")
 				choice2 = input("Try Again? (y[for repeat] / any key to main menu) >> ")
 				if choice2 == 'y':
@@ -1951,9 +1973,12 @@ def ext3():
 			print("(Ordinalized as year #",startcurrent+1,"-",endcurrent+1,")")
 			print("\n")
 			print("From 1 up to",y,",")
+			print("\nOr if you want, enter 0 for fast access to last year of the cycle!")
 			print("\n")
 			detect = int(input("Enter i-th year of the cycle! >> "))
-			if detect < 1 or detect > y:
+			if detect == 0:
+				detect = y
+			if detect < 0 or detect > y:
 				print("\nOut of range!\n")
 				choice2 = input("Try Again? (y[for repeat] / any key to main menu) >> ")
 				if choice2 == 'y':
@@ -2410,9 +2435,11 @@ def menu6x():
 		print("\n\nAnd ends on December 31 ,",(x*(y-1)+x-1))
 		print("(Ordinalized as Year #",(x*(y-1)+x),")")   
 		print("\n")
+		print("\nIf you want, enter 0 for fast access to last year of the cycle!")
 		print("Enter Year # of the cycle! (Must be from 1 to ",x,"!)") # Enter the j-th year of the i-th cycle from range 1 to the user inputted year cycles.
 		z = int(input(">> "))
-		
+		if z == 0:
+			z = x
 		if z < 1 or z > x: # If the j-th year is less than 1 or exceeded the user inputted year-cycles, then prompt to try again or not.
 			print("\n Must be in range 1 to",x,"!")
 			choice2 = input("Try Again? (y[for repeat] / any key to main menu) >> ")
@@ -2696,6 +2723,7 @@ def menu6x():
 
 
 #--------------------------End of Code--------------------------#
+
 
 
 
