@@ -820,7 +820,7 @@ def menu4():
 			if z == 0:
 				z = x
 			if z < 0 or z > x: # If the j-th year is less than one or exceeded the user inputted year cycles, prompt for try again or not
-				print("Must be in range 1 to",x,"!")
+				print("Must be in range 1 to",x,"!)")
 				print("Try Again? (y[for repeat] / any key to main menu) >> ")
 				choice2 = input()
 				if choice2 == 'y':
