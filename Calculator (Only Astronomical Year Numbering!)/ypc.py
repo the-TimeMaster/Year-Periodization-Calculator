@@ -760,8 +760,19 @@ def menu4():
 				print("\n------------------------------------------------")
 				print("[!] Current year ->", w)
 				print("\n[!] Current total year # (in ordinal) ->", w+1)
-				print("\n[!] Current specified year-cycle # ->", (w//x)+1)
-				print("\n[!] Current year # in the cycle ->", (w%x)+1)
+				if ((w//x) + 1) == 0:
+					print("\n[!] Current specified year-cycle # ->", (w//x)+1,"(Last cycle in negative)")
+				elif ((w//x) + 1) == 1:
+					print("\n[!] Current specified year-cycle # ->", (w//x)+1,"(First cycle in positive)")
+				else:
+					print("\n[!] Current specified year-cycle # ->", (w//x)+1)
+
+				if ((w%x)+1) == 1:
+					print("\n[!] Current year # in the cycle ->", (w%x)+1,"(First year)")
+				elif ((w%x)+1) == x:
+					print("\n[!] Current year # in the cycle ->", (w%x)+1,"(Last year)")
+				else:
+					print("\n[!] Current year # in the cycle ->", (w%x)+1)
 				print("------------------------------------------------")
 				print("\n\n")
 				print("This cycle starts from January 1 ,",(w//x)*x)
@@ -864,13 +875,26 @@ def menu4():
 				else:
 					main()
 			
+
 			os.system('cls')
 			print("Requested : Cycle of ->",x,"years\n")
 			print("\n------------------------------------------------")
+			
 			print("[!] Current year ->", res)
 			print("\n[!] Current total year # (in ordinal) ->", res+1)
-			print("\n[!] Current specified year-cycle # ->", (res//x)+1)
-			print("\n[!] Current year # in the cycle ->", (res%x)+1)
+			if ((res//x) + 1) == 0:
+					print("\n[!] Current specified year-cycle # ->", (res//x)+1,"(Last cycle in negative)")
+			elif ((res//x) + 1) == 1:
+				print("\n[!] Current specified year-cycle # ->", (res//x)+1,"(First cycle in positive)")
+			else:
+				print("\n[!] Current specified year-cycle # ->", (res//x)+1)
+			
+			if ((res%x)+1) == 1:
+				print("\n[!] Current year # in the cycle ->", (res%x)+1,"(First year)")
+			elif ((res%x)+1) == x:
+				print("\n[!] Current year # in the cycle ->", (res%x)+1,"(Last year)")
+			else:
+				print("\n[!] Current year # in the cycle ->", (res%x)+1)
 			print("------------------------------------------------")
 			print("\n\nThis cycle starts from January 1 ,",x*(y-1))
 			print("(Ordinalized as Year #",x*(y-1)+1,")")
@@ -1038,8 +1062,19 @@ def menu5():
 		print("\n\n")
 		print("[!] Current year ->", a)
 		print("\n[!] Current total year # (in ordinal) ->", a+1)
-		print("\n[!] Current specified year-cycle # ->", (a//c)+1)
-		print("\n[!] Current year # in the cycle ->", (a%c)+1)
+		if ((a//c) + 1) == 0:
+			print("\n[!] Current specified year-cycle # ->", (a//c)+1,"(Last cycle in negative)")
+		elif ((a//c) + 1) == 1:
+			print("\n[!] Current specified year-cycle # ->", (a//c)+1,"(First cycle in positive)")
+		else:
+			print("\n[!] Current specified year-cycle # ->", (a//c)+1)
+			
+		if ((a%c)+1) == 1:
+			print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First year)")
+		elif ((a%c)+1) == c:
+			print("\n[!] Current year # in the cycle ->", (a%c)+1,"(Last year)")
+		else:
+			print("\n[!] Current year # in the cycle ->", (a%c)+1)
 		print("\n------------------------------------------------")
 
 
@@ -1284,8 +1319,19 @@ def menu6():
 		print("\n\n")
 		print("[!] Current year ->", showyear)
 		print("\n[!] Current total year # ->", showyear+1)
-		print("\n[!] Current specified year-cycle # (in ordinal) ->", y)
-		print("\n[!] Current year # in the cycle ->", z)
+		if ((showyear//x) + 1) == 0:
+			print("\n[!] Current specified year-cycle # ->", (showyear//x)+1,"(Last cycle in negative)")
+		elif ((showyear//x) + 1) == 1:
+			print("\n[!] Current specified year-cycle # ->", (showyear//x)+1,"(First cycle in positive)")
+		else:
+			print("\n[!] Current specified year-cycle # ->", (showyear//x)+1)
+			
+		if ((showyear%x)+1) == 1:
+			print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(First year)")
+		elif ((showyear%x)+1) == x:
+			print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(Last year)")
+		else:
+			print("\n[!] Current year # in the cycle ->", (showyear%x)+1)
 		print("\n------------------------------------------------")
 
 		print("\n\nThis cycle starts from January 1 ,",x*(y-1)+0)
@@ -2313,8 +2359,19 @@ def menu5x():
 			print("\n------------------------------------------------")
 			print("[!] Current year ->", a)
 			print("\n[!] Current total year # (in ordinal) ->", a+1)
-			print("\n[!] Current specified year-cycle # ->", (a//c)+1)
-			print("\n[!] Current year # in the cycle ->", (a%c)+1)
+			if ((a//c) + 1) == 0:
+				print("\n[!] Current specified year-cycle # ->", (a//c)+1,"(Last cycle in negative)")
+			elif ((a//c) + 1) == 1:
+				print("\n[!] Current specified year-cycle # ->", (a//c)+1,"(First cycle in positive)")
+			else:
+				print("\n[!] Current specified year-cycle # ->", (a//c)+1)
+			
+			if ((a%c)+1) == 1:
+				print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First year)")
+			elif ((a%c)+1) == c:
+				print("\n[!] Current year # in the cycle ->", (a%c)+1,"(Last year)")
+			else:
+				print("\n[!] Current year # in the cycle ->", (a%c)+1)
 			print("------------------------------------------------")
 
 
@@ -2627,8 +2684,19 @@ def menu6x():
 			print("\n------------------------------------------------")
 			print("[!] Current year ->", showyear)
 			print("\n[!] Current total year # (in ordinal) ->", showyear + 1)
-			print("\n[!] Current specified year-cycle # ->", (showyear//x) + 1)
-			print("\n[!] Current year # in the cycle ->", (showyear%x) + 1)
+			if ((showyear//x) + 1) == 0:
+				print("\n[!] Current specified year-cycle # ->", (showyear//x)+1,"(Last cycle in negative)")
+			elif ((showyear//x) + 1) == 1:
+				print("\n[!] Current specified year-cycle # ->", (showyear//x)+1,"(First cycle in positive)")
+			else:
+				print("\n[!] Current specified year-cycle # ->", (showyear//x)+1)
+			
+			if ((showyear%x)+1) == 1:
+				print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(First year)")
+			elif ((showyear%x)+1) == x:
+				print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(Last year)")
+			else:
+				print("\n[!] Current year # in the cycle ->", (showyear%x)+1)
 			print("------------------------------------------------")
 
 			print("\n")
@@ -2723,7 +2791,6 @@ def menu6x():
 
 
 #--------------------------End of Code--------------------------#
-
 
 
 
