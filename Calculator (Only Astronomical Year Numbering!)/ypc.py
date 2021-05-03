@@ -1958,12 +1958,17 @@ def ext3():
 			getdate2a = calendar.weekday(startcurrent+detect-1,12,31)
 			dn1a = calendar.day_name[getdate1a]
 			dn2a = calendar.day_name[getdate2a]
-			if detect == y:
-				print("\n\n! Current occurence as last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
-			elif detect == 1:
-				print("\n\n! Current occurence as first year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
-			else:
-				print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			if y == 1:
+				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+
+			elif y > 1:
+				if detect == 1:
+					print("\n\n! Current occurence as first year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+
+				elif detect == y:
+					print("\n\n! Current occurence as last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+				else:
+					print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 			print("[",first,"]",dn1a,", January 1 ,",startcurrent+detect-1,"-",dn2a,", December 31 ,",startcurrent+detect-1)
 			print("(Ordinalized as year #",startcurrent+detect,")")
 			print("\n")
@@ -2044,15 +2049,17 @@ def ext3():
 			print("\nOr if you want, enter 0 for fast access to last year of the cycle!")
 			print("\n")
 			detect = int(input("Enter i-th year of the cycle! >> "))
-			if detect == 0:
-				detect = y
-			if detect < 0 or detect > y:
-				print("\nOut of range!\n")
-				choice2 = input("Try Again? (y[for repeat] / any key to main menu) >> ")
-				if choice2 == 'y':
-					ext3()
+			if y == 1:
+				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+
+			elif y > 1:
+				if detect == 1:
+					print("\n\n! Current occurence as first year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+
+				elif detect == y:
+					print("\n\n! Current occurence as last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 				else:
-					main()
+					print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 
 
 			getdate1a = calendar.weekday(startcurrent+detect-1,1,1) 
@@ -2136,12 +2143,17 @@ def ext3():
 			getdate2a = calendar.weekday(startcurrent+detect-1,12,31)
 			dn1a = calendar.day_name[getdate1a]
 			dn2a = calendar.day_name[getdate2a]
-			if detect == y:
-				print("\n\n! Current occurence as last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
-			elif detect == 1:
-				print("\n\n! Current occurence as first year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
-			else:
-				print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			if y == 1:
+				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+
+			elif y > 1:
+				if detect == 1:
+					print("\n\n! Current occurence as first year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+
+				elif detect == y:
+					print("\n\n! Current occurence as last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+				else:
+					print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 			print("[",first,"]",dn1a,", January 1 ,",startcurrent+detect-1,"-",dn2a,", December 31 ,",startcurrent+detect-1)
 			print("(Ordinalized as year #",startcurrent+detect,")")
 			print("\n")
@@ -2824,10 +2836,7 @@ def menu6x():
 		repeater()
 
 
-
-
 #--------------------------End of Code--------------------------#
-
 
 
 
