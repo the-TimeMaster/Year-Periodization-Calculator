@@ -2397,7 +2397,7 @@ def menu5x():
 				print("\n[!] Current specified year-cycle # ->", (a//c)+1,"(First cycle in positive)")
 			else:
 				print("\n[!] Current specified year-cycle # ->", (a//c)+1)
-			if x == 1:
+			if c == 1:
 				print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First and last year simultanously)")
 			else:
 				if ((a%c)+1) == 1:
