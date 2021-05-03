@@ -1404,7 +1404,7 @@ def menu6():
 def factors(x):
 	distinct = 0 # This will be used as the # of divisors that divides the user inputted year 
 	#The iteration will be run from 1 to square root of the user inputted year
-	for i in range(1,int(x**0.5)):
+	for i in range(1,int(x**0.5)+1):
 		if x%i == 0:
 		    print(i,"-------",x//i)
 		    if (x//i == i): #This happens when user inputted year is considered as the perfect square #
