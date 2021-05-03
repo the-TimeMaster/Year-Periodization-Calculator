@@ -9,13 +9,13 @@ def repeater():
 		repeat = input()
 		main()
 	except:
-		os.system('cls')
+		os.system('clear')
 		repeater()
 				
 # Main Menu
 def main():
 	try:
-		os.system('cls')
+		os.system('clear')
 		print("----------------YEAR PERIODIZATION CALCULATOR----------------")
 		print("\n")
 		print("\nSelect Menu!")
@@ -87,14 +87,14 @@ def main():
 			ext3()
 
 		else: # If the user input doesn't correspond to the menu
-			os.system('cls')
+			os.system('clear')
 			main()
 	except:
-		os.system('cls')
+		os.system('clear')
 		main()
 # If the user inputted '?' and hit enter then call this menu and automatically show the guidine menu.
 def guide():
-	os.system('cls') # cls the screen first
+	os.system('clear') # clear the screen first
 	print("\"! How to calculate i-th year of the cycle?\"")
 	print("----------------------------------------------------------------------------------------------")
 	print("\n")
@@ -136,7 +136,7 @@ def guide():
 # If user entered '1' and hit enter then execute this menu in menu1 function.
 def menu1():
 	try:
-		os.system('cls') # cls the screen first
+		os.system('clear') # clear the screen first
 		print("1. Start and end of an n - year cycle") # Show the name of the menu each operation
 		print("\n")
 		ca = int(input("Input Set of Years per Cycle (more than 0)! >> ")) # Input for sets of years per each cycle
@@ -162,14 +162,14 @@ def menu1():
 		print("\n(Ordinalized as Year #",b1+1,"to",e1+1,")") #The ordinalized as year means the calculated year field + 1, indicates the ordinal mark. 
 		repeater()	
 	except: # If along the operation, if user input contained at least a non-# (or more) input, or no input has been submitted, then this will force to go to main menu  
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 
 # If user entered '2' and hit enter then execute this menu in menu2 function.
 def menu2():
 	try:
-		os.system('cls') # cls the screen first
+		os.system('clear') # clear the screen first
 		print("2. Year Description Modifier") # Show the name of the menu each operation
 		print("\n")
 		year = int(input("Enter Year >> ")) # User freely input any digit year field for calculation
@@ -626,13 +626,13 @@ def menu2():
 				main()
 		repeater()
 	except: #If the input is not a # or no input has been submitted
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 # If user entered '3' and hit enter then execute this menu in menu3 function.
 def menu3():
 	try:
-		os.system('cls')
+		os.system('clear')
 		print("3. New n - year cycle's eve") # Show the name of the menu each operation
 		print("\n")
 		cycleset = int(input("Input Set of Years per Cycle (more than 0) >> ")) # User input for set of years per each cycle
@@ -661,13 +661,13 @@ def menu3():
 		print("\n(Ordinalized as Year #",e1+1,")")
 		repeater()
 	except: # If User Input was not a # or either none
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 # If user entered '4' and hit enter then execute this menu in menu4 function.
 def menu4():
 	try:
-		os.system('cls') # cls the screen first
+		os.system('clear') # clear the screen first
 		print("4. Calendar Maker") # Show the name of the menu each operation
 		print("\n")
 
@@ -713,7 +713,7 @@ def menu4():
 					else:
 						main()
 				print("\n")
-				os.system('cls')
+				os.system('clear')
 				print(calendar.prcal(w)) # Print the whole calendar of the user inputted year with format of three months each line
 			
 			elif detail == 'Y' or detail == 'y':
@@ -755,7 +755,7 @@ def menu4():
 					else:
 						main()
 				
-				os.system('cls')
+				os.system('clear')
 				print("Requested : Cycle of ->",x,"years\n")
 				print("\n------------------------------------------------")
 				print("[!] Current year ->", w)
@@ -796,7 +796,7 @@ def menu4():
 				print(calendar.prcal(w)) # Print the whole calendar of the resulting year with format of three months each line
 
 			else:
-				os.system('cls')
+				os.system('clear')
 				print("Wrong argument!")
 				print("Try Again? (y[for repeat] / any key to main menu)")
 				choice2 = input()
@@ -877,7 +877,7 @@ def menu4():
 				else:
 					main()
 			
-			os.system('cls')
+			os.system('clear')
 			print("Requested : Cycle of ->",x,"years\n")
 			print("\n------------------------------------------------")
 
@@ -917,13 +917,13 @@ def menu4():
 			print(calendar.prcal(res)) # Print the whole calendar of the resulting year with format of three months each line
 		repeater()
 	except:
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 # If user entered '5' and hit enter then execute this menu in menu5 function.
 def menu5():
 	try:
-		os.system('cls') # cls the Screen First
+		os.system('clear') # clear the Screen First
 		print("5. Get date in New Format") # Show the name of the menu each operation
 		print("\n")
 		a = int(input("Enter Year >> ")) # Firstly user input the desired year
@@ -1060,7 +1060,7 @@ def menu5():
 			x = datetime.datetime(a%400,ab,abc)
 		
 		# Print the result
-		os.system('cls')
+		os.system('clear')
 		print("Requested : Cycle of ->",c,"years\n")
 		print("\n\n")
 		print("[!] Current year ->", a)
@@ -1145,13 +1145,13 @@ def menu5():
 
 		repeater()
 	except:
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 # If user entered '6' and hit enter then execute this menu in menu6 function.
 def menu6():
 	try:
-		os.system('cls') # cls the screen first
+		os.system('clear') # clear the screen first
 		print("6. Convert year into New Format by (Cycle_#-Year_#)") # Show the name of the menu each operation
 		print("\n")
 		x = int(input("\n\nInput Set of Years per Cycle (more than 0)! >> ")) # This will prompt user for inputting desired year cycle for calculation
@@ -1319,7 +1319,7 @@ def menu6():
 		elif showyear%400 != 0:
 			i = datetime.datetime(showyear%400,ab,abc)
 
-		os.system('cls')
+		os.system('clear')
 		print("Requested : Cycle of ->",x,"years\n")
 		print("\n\n")
 		print("[!] Current year ->", showyear)
@@ -1398,7 +1398,7 @@ def menu6():
 
 		repeater()
 	except: # If user input is not a # or none of the value given
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 def factors(x):
@@ -1417,7 +1417,7 @@ def factors(x):
 # If user entered '7' and hit enter then execute this menu in menu7 function.
 def menu7():
 	try:
-		os.system('cls') # cls the screen first
+		os.system('clear') # clear the screen first
 		print("7. All Factors of inputted Year") # Show the name of the menu each operation
 		print("\n")
 		print("\nWARNING!!!\n\nBig #s cannot be handled faster! Are you sure want to do this??") # A Warning message because this operation deals with many iterations.
@@ -1457,20 +1457,20 @@ def menu7():
 			repeater()
 
 		elif warn == 'n':
-			os.system('cls')
+			os.system('clear')
 			main()
 		else:
-			os.system('cls')
+			os.system('clear')
 			menu7()
 		repeater()
 	except: # If user input is not a # or no input has been given
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 # If user entered '8' and hit enter then execute this menu in menu8 function.
 def menu8():
 	try:
-		os.system('cls') # cls the screen first
+		os.system('clear') # clear the screen first
 		print("8. i-th Year of the Cycle") # Show the name of the menu each operation
 		print("\n")
 		n = int(input("Input Set of Years per Cycle (more than 0)! >> ")) # Enter the set of years per cycle
@@ -1528,14 +1528,14 @@ def menu8():
 
 		repeater()
 	except: # If user input is not a # or no input has been given
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 
 # If user entered '9' and hit enter then execute this menu in menu9 function.
 def menu9():
 	try:
-		os.system('cls') # cls the screen first
+		os.system('clear') # clear the screen first
 		print("9. Current cycle of the inputted year") # Show the name of the menu each operation
 		print("\n")
 		year = int(input("Enter year to calculate -> "))
@@ -1591,13 +1591,13 @@ def menu9():
 
 		repeater()
 	except: # If user input is not a # or no input has been given
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 # If user entered '0' and hit enter then execute this menu in menu0 function.
 def menu0():
 	try:
-		os.system('cls') # cls the screen first
+		os.system('clear') # clear the screen first
 		print("0. Day difference between Gregorian Calendar and Julian Calendar") # Show the name of the menu each operation
 		print("\n")
 		year = int(input("Enter year >> "))
@@ -1634,13 +1634,13 @@ def menu0():
 				print(total,"days ahead of Julian Calendar") # For years 300 and above
 		repeater()
 	except: # If user input is not a # or no input has been given
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 # If user entered '!' and hit enter then execute this menu in yearindexing function.
 def yearindexing():
 	try:
-		os.system('cls') # cls the screen first
+		os.system('clear') # clear the screen first
 		print("!. Year Indexing!\n") # Show the name of the menu each operation
 		#It also features four selections, the actual purpose of this menu is to list every perfect 400 - year cycle list.
 		print("1. 400 - year cycle indexing, or")
@@ -1693,7 +1693,7 @@ def yearindexing():
 		
 		repeater()
 	except: # If user input is not # or no input given
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 	#--------------------------End of Main Menu(s)--------------------------#
@@ -1704,7 +1704,7 @@ def yearindexing():
 # If user entered '9a' or '9A' and hit enter then execute this menu in ext1 function.
 def ext1():
 	try:
-		os.system('cls') #cls the screen first
+		os.system('clear') #clear the screen first
 		print("9a. Calculate the next and past periods based on an n - year cycle") # Show the name of the menu each operation
 		print("\n\n")
 		sel = input("By direct enter i-th cycle (x) or by manually enter year to detect the cycle automatically (y) ? >> ")
@@ -1855,7 +1855,7 @@ def ext1():
 
 
 	except: # If user input is not # or no input given
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 
@@ -1863,7 +1863,7 @@ def ext1():
 # If user entered '9b' or '9B' and hit enter then execute this menu in ext2 function.
 def ext2():
 	try:
-		os.system('cls')
+		os.system('clear')
 		print("9b. Years left until the next specific calendrical n - cycle\n\n")
 		year = int(input("Enter Year >> "))
 		cycle = int(input("Enter n - year cycle (more than 0) >> ")) #10
@@ -1906,12 +1906,12 @@ def ext2():
 		
 
 	except: # If the user input is not a # or no input given
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 def ext3():
 	try:
-		os.system('cls') #cls the screen first
+		os.system('clear') #clear the screen first
 		print("9c. Calculate the next and past occurences of the i-th year of the particular cycle") # Show the name of the menu each operation
 		print("\n\n")
 		sel = input("By direct enter i-th cycle (x), or by manually enter year to detect the cycle automatically (y),\nor direct detect the cycle along with the i-th year of the cycle (z) ? >> ")
@@ -1958,7 +1958,7 @@ def ext3():
 			getdate2a = calendar.weekday(startcurrent+detect-1,12,31)
 			dn1a = calendar.day_name[getdate1a]
 			dn2a = calendar.day_name[getdate2a]
-			if y == 1:
+			if y == 1 and detect == 1:
 				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 
 			elif y > 1:
@@ -2049,7 +2049,7 @@ def ext3():
 			print("\nOr if you want, enter 0 for fast access to last year of the cycle!")
 			print("\n")
 			detect = int(input("Enter i-th year of the cycle! >> "))
-			if y == 1:
+			if y == 1 and detect == 1:
 				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 
 			elif y > 1:
@@ -2143,7 +2143,7 @@ def ext3():
 			getdate2a = calendar.weekday(startcurrent+detect-1,12,31)
 			dn1a = calendar.day_name[getdate1a]
 			dn2a = calendar.day_name[getdate2a]
-			if y == 1:
+			if y == 1 and detect == 1:
 				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 
 			elif y > 1:
@@ -2214,14 +2214,14 @@ def ext3():
 				main()
 
 	except: # If user input is not # or no input given
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 #Extensions For Mode 5 and 6
 
 def menu5x():
 	try:
-		os.system('cls') # cls the Screen First
+		os.system('clear') # clear the Screen First
 		print("5x. Get date in New Format (With Custom Clock)") # Show the name of the menu each operation
 		print("\n")
 		a = int(input("Enter Year >> ")) # Firstly user input the desired year
@@ -2376,7 +2376,7 @@ def menu5x():
 				menu5x()
 			else:
 				main()
-		os.system('cls')  
+		os.system('clear')  
 
 		day = calendar.weekday((a),ab,abc)
 		month = calendar.month_name[ab]
@@ -2507,16 +2507,16 @@ def menu5x():
 					hour = 0
 					abc+=1
 			seconds = 0
-			os.system('cls')
+			os.system('clear')
 
 	
 	except:
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 def menu6x():
 	try:
-		os.system('cls') # cls the Screen First
+		os.system('clear') # clear the Screen First
 		print("6x. Convert year into New Format by (Cycle_#-Year_#) (With Custom Clock)") # Show the name of the menu each operation
 		print("\n")
 		x = int(input("\n\nEnter n - year cycle! (more than 0!) >> ")) # This will prompt user for inputting desired year cycle for calculation
@@ -2704,7 +2704,7 @@ def menu6x():
 				menu6x()
 			else:
 				main()
-		os.system('cls')
+		os.system('clear')
 
 		day = calendar.weekday(showyear,ab,abc)
 		month = calendar.month_name[ab]
@@ -2829,10 +2829,10 @@ def menu6x():
 					hour = 0
 					abc += 1
 			seconds = 0
-			os.system('cls')
+			os.system('clear')
 
 	except:
-		os.system('cls')
+		os.system('clear')
 		repeater()
 
 

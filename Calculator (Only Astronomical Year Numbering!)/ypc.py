@@ -1958,7 +1958,7 @@ def ext3():
 			getdate2a = calendar.weekday(startcurrent+detect-1,12,31)
 			dn1a = calendar.day_name[getdate1a]
 			dn2a = calendar.day_name[getdate2a]
-			if y == 1:
+			if y == 1 and detect == 1:
 				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 
 			elif y > 1:
@@ -2049,7 +2049,7 @@ def ext3():
 			print("\nOr if you want, enter 0 for fast access to last year of the cycle!")
 			print("\n")
 			detect = int(input("Enter i-th year of the cycle! >> "))
-			if y == 1:
+			if y == 1 and detect == 1:
 				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 
 			elif y > 1:
@@ -2143,7 +2143,7 @@ def ext3():
 			getdate2a = calendar.weekday(startcurrent+detect-1,12,31)
 			dn1a = calendar.day_name[getdate1a]
 			dn2a = calendar.day_name[getdate2a]
-			if y == 1:
+			if y == 1 and detect == 1:
 				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 
 			elif y > 1:
