@@ -1071,7 +1071,7 @@ def menu5():
 			print("\n[!] Current specified year-cycle # ->", (a//c)+1,"(First cycle in positive)")
 		else:
 			print("\n[!] Current specified year-cycle # ->", (a//c)+1)
-		if x == 1:
+		if c == 1:
 			print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First and last year simultanously)")
 		else:
 			if ((a%c)+1) == 1:
@@ -1578,11 +1578,11 @@ def menu9():
 			print(">> Current year # in this cycle for year",year,"is:\n",((year)%cycle)+1,"of",cycle,"(First and last year simultanously\n")
 		else:
 			if ((year%cycle)+1) == 1:
-				print(">> Current year # in this cycle for year",year,"is:\n",((year)%cycle)+1,"of",cycle,"(First year\n")
+				print(">> Current year # in this cycle for year",year,"is:\n\n",((year)%cycle)+1,"of",cycle,"(First year)\n")
 			elif ((year%cycle)+1) == cycle:
-				print(">> Current year # in this cycle for year",year,"is:\n",((year)%cycle)+1,"of",cycle,"(Last year\n")
+				print(">> Current year # in this cycle for year",year,"is:\n\n",((year)%cycle)+1,"of",cycle,"(Last year\n")
 			else:
-				print(">> Current year # in this cycle for year",year,"is:\n",((year)%cycle)+1,"of",cycle,"\n")
+				print(">> Current year # in this cycle for year",year,"is:\n\n",((year)%cycle)+1,"of",cycle,"\n")
 		
 		print("\n")
 		print(">> Next Cycle No:",cnoa+1)
