@@ -1,5 +1,5 @@
-# Import os, math, time, calendar, and also datetime module
-import os,math,time,calendar,datetime
+# Import os, time, calendar, and also datetime module
+import os,time,calendar,datetime
 
  
 # This module will be called after each operation in every single mode, or if the entered input was not a #.
@@ -159,7 +159,7 @@ def menu1():
 		# Print the result
 		print("\nCycle #", cycleno," of ",cycleset,"- year cycle ranges from")
 		print(calendar.day_name[begin1],", January 1 ,", b1, " (00:00:00) - ",calendar.day_name[end1],", December 31 ,", e1," (23:59:59)")
-		print("\n(Ordinalized as Year #",b1+1,"-",e1+1,")") #The ordinalized as year means the calculated year field + 1, indicates the ordinal mark. 
+		print("\n(Ordinalized as Year #",b1+1,"to",e1+1,")") #The ordinalized as year means the calculated year field + 1, indicates the ordinal mark. 
 		repeater()	
 	except: # If along the operation, if user input contained at least a non-# (or more) input, or no input has been submitted, then this will force to go to main menu  
 		os.system('clear')
@@ -766,13 +766,15 @@ def menu4():
 					print("\n[!] Current specified year-cycle # ->", (w//x)+1,"(First cycle in positive)")
 				else:
 					print("\n[!] Current specified year-cycle # ->", (w//x)+1)
-
-				if ((w%x)+1) == 1:
-					print("\n[!] Current year # in the cycle ->", (w%x)+1,"(First year)")
-				elif ((w%x)+1) == x:
-					print("\n[!] Current year # in the cycle ->", (w%x)+1,"(Last year)")
+				if x == 1:
+					print("\n[!] Current year # in the cycle ->", (w%x)+1,"(First and last year simultanously)")
 				else:
-					print("\n[!] Current year # in the cycle ->", (w%x)+1)
+					if ((w%x)+1) == 1:
+						print("\n[!] Current year # in the cycle ->", (w%x)+1,"(First year)")
+					elif ((w%x)+1) == x:
+						print("\n[!] Current year # in the cycle ->", (w%x)+1,"(Last year)")
+					else:
+						print("\n[!] Current year # in the cycle ->", (w%x)+1)
 				print("------------------------------------------------")
 				print("\n\n")
 				print("This cycle starts from January 1 ,",(w//x)*x)
@@ -875,26 +877,27 @@ def menu4():
 				else:
 					main()
 			
-
 			os.system('clear')
 			print("Requested : Cycle of ->",x,"years\n")
 			print("\n------------------------------------------------")
-			
+
 			print("[!] Current year ->", res)
 			print("\n[!] Current total year # (in ordinal) ->", res+1)
 			if ((res//x) + 1) == 0:
 					print("\n[!] Current specified year-cycle # ->", (res//x)+1,"(Last cycle in negative)")
 			elif ((res//x) + 1) == 1:
-				print("\n[!] Current specified year-cycle # ->", (res//x)+1,"(First cycle in positive)")
+					print("\n[!] Current specified year-cycle # ->", (res//x)+1,"(First cycle in positive)")
 			else:
 				print("\n[!] Current specified year-cycle # ->", (res//x)+1)
-			
-			if ((res%x)+1) == 1:
-				print("\n[!] Current year # in the cycle ->", (res%x)+1,"(First year)")
-			elif ((res%x)+1) == x:
-				print("\n[!] Current year # in the cycle ->", (res%x)+1,"(Last year)")
+			if x == 1:
+				print("\n[!] Current year # in the cycle ->", (res%x)+1,"(First and last year simultanously)")
 			else:
-				print("\n[!] Current year # in the cycle ->", (res%x)+1)
+				if ((res%x)+1) == 1:
+					print("\n[!] Current year # in the cycle ->", (res%x)+1,"(First year)")
+				elif ((res%x)+1) == x:
+					print("\n[!] Current year # in the cycle ->", (res%x)+1,"(Last year)")
+				else:
+					print("\n[!] Current year # in the cycle ->", (res%x)+1)
 			print("------------------------------------------------")
 			print("\n\nThis cycle starts from January 1 ,",x*(y-1))
 			print("(Ordinalized as Year #",x*(y-1)+1,")")
@@ -1068,13 +1071,15 @@ def menu5():
 			print("\n[!] Current specified year-cycle # ->", (a//c)+1,"(First cycle in positive)")
 		else:
 			print("\n[!] Current specified year-cycle # ->", (a//c)+1)
-			
-		if ((a%c)+1) == 1:
-			print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First year)")
-		elif ((a%c)+1) == c:
-			print("\n[!] Current year # in the cycle ->", (a%c)+1,"(Last year)")
+		if x == 1:
+			print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First and last year simultanously)")
 		else:
-			print("\n[!] Current year # in the cycle ->", (a%c)+1)
+			if ((a%c)+1) == 1:
+				print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First year)")
+			elif ((a%c)+1) == c:
+				print("\n[!] Current year # in the cycle ->", (a%c)+1,"(Last year)")
+			else:
+				print("\n[!] Current year # in the cycle ->", (a%c)+1)
 		print("\n------------------------------------------------")
 
 
@@ -1325,13 +1330,16 @@ def menu6():
 			print("\n[!] Current specified year-cycle # ->", (showyear//x)+1,"(First cycle in positive)")
 		else:
 			print("\n[!] Current specified year-cycle # ->", (showyear//x)+1)
-			
-		if ((showyear%x)+1) == 1:
-			print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(First year)")
-		elif ((showyear%x)+1) == x:
-			print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(Last year)")
+		if x == 1:
+			print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(First and last year simultanously)")
 		else:
-			print("\n[!] Current year # in the cycle ->", (showyear%x)+1)
+			if ((showyear%x)+1) == 1:
+				print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(First year)")
+			elif ((showyear%x)+1) == x:
+				print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(Last year)")
+			else:
+				print("\n[!] Current year # in the cycle ->", (showyear%x)+1)
+
 		print("\n------------------------------------------------")
 
 		print("\n\nThis cycle starts from January 1 ,",x*(y-1)+0)
@@ -1396,7 +1404,7 @@ def menu6():
 def factors(x):
 	distinct = 0 # This will be used as the # of divisors that divides the user inputted year 
 	#The iteration will be run from 1 to square root of the user inputted year
-	for i in range(1,int(math.sqrt(x))+1):
+	for i in range(1,int(x**0.5)):
 		if x%i == 0:
 		    print(i,"-------",x//i)
 		    if (x//i == i): #This happens when user inputted year is considered as the perfect square #
@@ -1566,7 +1574,16 @@ def menu9():
 		print(">> Current Cycle No:",cnoa)
 		print(">> Current Ranged Years ->      ",startA,"-",endA)
 		print("(Ordinalized as Year #",startA+1,"-",endA+1,")")
-		print(">> Current year # in this cycle for year",year,"is ->  ",((year)%cycle)+1,"of",cycle)
+		if cycle == 1:
+			print(">> Current year # in this cycle for year",year,"is:\n",((year)%cycle)+1,"of",cycle,"(First and last year simultanously\n")
+		else:
+			if ((year%cycle)+1) == 1:
+				print(">> Current year # in this cycle for year",year,"is:\n",((year)%cycle)+1,"of",cycle,"(First year\n")
+			elif ((year%cycle)+1) == cycle:
+				print(">> Current year # in this cycle for year",year,"is:\n",((year)%cycle)+1,"of",cycle,"(Last year\n")
+			else:
+				print(">> Current year # in this cycle for year",year,"is:\n",((year)%cycle)+1,"of",cycle,"\n")
+		
 		print("\n")
 		print(">> Next Cycle No:",cnoa+1)
 		print(">> Next Ranged Years ->      ",startA+cycle,"-",endA+cycle)
@@ -1941,7 +1958,12 @@ def ext3():
 			getdate2a = calendar.weekday(startcurrent+detect-1,12,31)
 			dn1a = calendar.day_name[getdate1a]
 			dn2a = calendar.day_name[getdate2a]
-			print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			if detect == y:
+				print("\n\n! Current occurence as last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			elif detect == 1:
+				print("\n\n! Current occurence as first year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			else:
+				print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 			print("[",first,"]",dn1a,", January 1 ,",startcurrent+detect-1,"-",dn2a,", December 31 ,",startcurrent+detect-1)
 			print("(Ordinalized as year #",startcurrent+detect,")")
 			print("\n")
@@ -2037,7 +2059,12 @@ def ext3():
 			getdate2a = calendar.weekday(startcurrent+detect-1,12,31)
 			dn1a = calendar.day_name[getdate1a]
 			dn2a = calendar.day_name[getdate2a]
-			print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			if detect == y:
+				print("\n\n! Current occurence as last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			elif detect == 1:
+				print("\n\n! Current occurence as first year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			else:
+				print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 			print("[",first,"]",dn1a,", January 1 ,",startcurrent+detect-1,"-",dn2a,", December 31 ,",startcurrent+detect-1)
 			print("(Ordinalized as year #",startcurrent+detect,")")
 			print("\n")
@@ -2109,7 +2136,12 @@ def ext3():
 			getdate2a = calendar.weekday(startcurrent+detect-1,12,31)
 			dn1a = calendar.day_name[getdate1a]
 			dn2a = calendar.day_name[getdate2a]
-			print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			if detect == y:
+				print("\n\n! Current occurence as last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			elif detect == 1:
+				print("\n\n! Current occurence as first year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
+			else:
+				print("\n\n! Current occurence as year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 			print("[",first,"]",dn1a,", January 1 ,",startcurrent+detect-1,"-",dn2a,", December 31 ,",startcurrent+detect-1)
 			print("(Ordinalized as year #",startcurrent+detect,")")
 			print("\n")
@@ -2365,13 +2397,15 @@ def menu5x():
 				print("\n[!] Current specified year-cycle # ->", (a//c)+1,"(First cycle in positive)")
 			else:
 				print("\n[!] Current specified year-cycle # ->", (a//c)+1)
-			
-			if ((a%c)+1) == 1:
-				print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First year)")
-			elif ((a%c)+1) == c:
-				print("\n[!] Current year # in the cycle ->", (a%c)+1,"(Last year)")
+			if x == 1:
+				print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First and last year simultanously)")
 			else:
-				print("\n[!] Current year # in the cycle ->", (a%c)+1)
+				if ((a%c)+1) == 1:
+					print("\n[!] Current year # in the cycle ->", (a%c)+1,"(First year)")
+				elif ((a%c)+1) == c:
+					print("\n[!] Current year # in the cycle ->", (a%c)+1,"(Last year)")
+				else:
+					print("\n[!] Current year # in the cycle ->", (a%c)+1)
 			print("------------------------------------------------")
 
 
@@ -2555,7 +2589,7 @@ def menu6x():
 			print("Try Again? (y[for repeat] / any key to main menu)")
 			choice2 = input()
 			if choice2 == 'y':
-				menu5()
+				menu6x()
 			else:
 				main()
 
@@ -2690,13 +2724,15 @@ def menu6x():
 				print("\n[!] Current specified year-cycle # ->", (showyear//x)+1,"(First cycle in positive)")
 			else:
 				print("\n[!] Current specified year-cycle # ->", (showyear//x)+1)
-			
-			if ((showyear%x)+1) == 1:
-				print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(First year)")
-			elif ((showyear%x)+1) == x:
-				print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(Last year)")
+			if x == 1:
+				print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(First and last year simultanously)")
 			else:
-				print("\n[!] Current year # in the cycle ->", (showyear%x)+1)
+				if ((showyear%x)+1) == 1:
+					print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(First year)")
+				elif ((showyear%x)+1) == x:
+					print("\n[!] Current year # in the cycle ->", (showyear%x)+1,"(Last year)")
+				else:
+					print("\n[!] Current year # in the cycle ->", (showyear%x)+1)
 			print("------------------------------------------------")
 
 			print("\n")
