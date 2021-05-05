@@ -715,7 +715,8 @@ def menu4():
 				print("\n")
 				os.system('cls')
 				print(calendar.prcal(w)) # Print the whole calendar of the user inputted year with format of three months each line
-			
+				print("\n")
+				repeater()
 			elif detail == 'Y' or detail == 'y':
 				x = int(input("\n\nInput Set of Years per Cycle (more than 0)! >> "))
 				if x < 1: # If the year cycle is less than 1, then prompt the user to try again or not
@@ -915,7 +916,15 @@ def menu4():
 			print("D / M /",z-1,"/",y-1,"/",x)
 			print("\n")
 			print(calendar.prcal(res)) # Print the whole calendar of the resulting year with format of three months each line
-		repeater()
+			repeater()
+		elif sel != '1' or sel != '2':
+			print("Try Again? (y[for repeat] / any key to main menu) >> ")
+			choice2 = input()
+			if choice2 == 'y':
+				menu4()
+			else:
+				main()
+
 	except:
 		os.system('cls')
 		repeater()
@@ -2049,6 +2058,14 @@ def ext3():
 			print("\nOr if you want, enter 0 for fast access to last year of the cycle!")
 			print("\n")
 			detect = int(input("Enter i-th year of the cycle! >> "))
+			if detect > y:
+				print("Out of range!")
+				print("Try Again? (y[for repeat] / any key to main menu)")
+				choice2 = input()
+				if choice2 == 'y':
+					ext3()
+				else:
+					main()
 			if y == 1 and detect == 1:
 				print("\n\n! Current occurence as first and last year or year #",detect,"(or a",detect-1,"- remaindered year) of",y,"- year cycle is:\n")
 
@@ -2837,6 +2854,7 @@ def menu6x():
 
 
 #--------------------------End of Code--------------------------#
+
 
 
 
