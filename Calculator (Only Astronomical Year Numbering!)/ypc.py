@@ -716,7 +716,6 @@ def menu4():
 				os.system('cls')
 				print(calendar.prcal(w)) # Print the whole calendar of the user inputted year with format of three months each line
 				print("\n")
-				repeater()
 			elif detail == 'Y' or detail == 'y':
 				x = int(input("\n\nInput Set of Years per Cycle (more than 0)! >> "))
 				if x < 1: # If the year cycle is less than 1, then prompt the user to try again or not
@@ -924,7 +923,7 @@ def menu4():
 				menu4()
 			else:
 				main()
-
+		repeater()
 	except:
 		os.system('cls')
 		repeater()
@@ -2854,6 +2853,7 @@ def menu6x():
 
 
 #--------------------------End of Code--------------------------#
+
 
 
 
