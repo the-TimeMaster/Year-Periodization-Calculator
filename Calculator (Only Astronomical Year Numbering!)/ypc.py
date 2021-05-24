@@ -684,6 +684,25 @@ def menu4():
 			detail = input("\n[?] Want to use details? (Y/N) >> ")
 			if detail == 'N' or detail == 'n':
 				print("\n\n0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday")
+				print("\n")
+				day = calendar.weekday((w),1,1)
+				dayname = calendar.day_name[day]
+				if dayname == "Saturday":
+					print("\nFirst Day of January Code : 0 (Saturday)")
+				elif dayname == "Sunday":
+					print("\nFirst Day of January Code : 1 (Sunday)")
+				elif dayname == "Monday":
+					print("\nFirst Day of January Code : 2 (Monday)")
+				elif dayname == "Tuesday":
+					print("\nFirst Day of January Code : 3 (Tuesday)")
+				elif dayname == "Wednesday":
+					print("\nFirst Day of January Code : 4 (Wednesday)")
+				elif dayname == "Thursday":
+					print("\nFirst Day of January Code : 5 (Thursday)")
+				elif dayname == "Friday":
+					print("\nFirst Day of January Code : 6 (Friday)")
+
+
 				d = input("\nEnter Starting day of the week! >> ")
 				
 				# If user entered 0 as the starting day of the week, the calendar will have the first day of the week as Saturday, 1 for Sunday, 2 for Monday, and so on until 6 for Friday.
@@ -727,6 +746,23 @@ def menu4():
 					else:
 						main()
 				print("\n\n0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday")
+				day = calendar.weekday((w),1,1)
+				dayname = calendar.day_name[day]
+				if dayname == "Saturday":
+					print("\nFirst Day of January Code : 0 (Saturday)")
+				elif dayname == "Sunday":
+					print("\nFirst Day of January Code : 1 (Sunday)")
+				elif dayname == "Monday":
+					print("\nFirst Day of January Code : 2 (Monday)")
+				elif dayname == "Tuesday":
+					print("\nFirst Day of January Code : 3 (Tuesday)")
+				elif dayname == "Wednesday":
+					print("\nFirst Day of January Code : 4 (Wednesday)")
+				elif dayname == "Thursday":
+					print("\nFirst Day of January Code : 5 (Thursday)")
+				elif dayname == "Friday":
+					print("\nFirst Day of January Code : 6 (Friday)")
+
 				d = input("\nEnter Starting day of the week! >> ")
 				# If user entered 0 as the starting day of the week, the calendar will have the first day of the week as Saturday, 1 for Sunday, 2 for Monday, and so on until 6 for Friday.
 
@@ -849,6 +885,23 @@ def menu4():
 			print("(Ordinalized as Year #",res+1,")")
 
 			print("\n\n0 = Saturday, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday")
+			day = calendar.weekday((res),1,1)
+			dayname = calendar.day_name[day]
+			if dayname == "Saturday":
+				print("\nFirst Day of January Code : 0 (Saturday)")
+			elif dayname == "Sunday":
+				print("\nFirst Day of January Code : 1 (Sunday)")
+			elif dayname == "Monday":
+				print("\nFirst Day of January Code : 2 (Monday)")
+			elif dayname == "Tuesday":
+				print("\nFirst Day of January Code : 3 (Tuesday)")
+			elif dayname == "Wednesday":
+				print("\nFirst Day of January Code : 4 (Wednesday)")
+			elif dayname == "Thursday":
+				print("\nFirst Day of January Code : 5 (Thursday)")
+			elif dayname == "Friday":
+				print("\nFirst Day of January Code : 6 (Friday)")
+
 			d = input("\nEnter Starting day of the week! >> ")
 			# If user entered 0 as the starting day of the week, the calendar will have the first day of the week as Saturday, 1 for Sunday, 2 for Monday, and so on until 6 for Friday.
 
@@ -2853,7 +2906,6 @@ def menu6x():
 
 
 #--------------------------End of Code--------------------------#
-
 
 
 
